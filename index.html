@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+       <header>
+      <h1 class="main-heading">Registration form</h1>
+    </header>
+    <div class="main-container">
+      <form class="row g-3 registration-form">
+        <div class="col-md-4">
+          <label for="firstNameValidation" class="form-label">First name</label>
+          <input type="text" class="form-control" onkeydown="validate(false)" id="firstNameValidation" />
+          <div class="valid-feedback" id="firstNameValid">Looks good!</div>
+          <div class="invalid-feedback" id="firstNameInvalid">
+            Please enter a valid first-name!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="lastNameValidation" class="form-label">Last name</label>
+          <input type="text" class="form-control" onkeydown="validate(false)" id="lastNameValidation" />
+          <div class="valid-feedback" id="lastNameValid">Looks good!</div>
+          <div class="invalid-feedback" id="lastNameInvalid">
+            Please enter a valid last-name!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="mailValidation" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input
+              onkeydown="validate(false)"
+              type="text"
+              class="form-control"
+              id="mailValidation"
+              aria-describedby="inputGroupPrepend"
+            />
+            <div class="valid-feedback" id="mailValid">Looks good!</div>
+            <div class="invalid-feedback" id="mailInvalid">
+              Please enter a valid E-mail address.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="passValidation" class="form-label">Password</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">*</span>
+          <input type="text" class="form-control" onkeydown="validate(false)" id="passValidation" />
+          <div class="valid-feedback" id="passValid">Looks good!</div>
+          <div class="invalid-feedback" id="passInValid">
+            Please provide a valid password..
+          </div>
+          </div>
+        </div> 
+       
+        <div class="col-md-6">
+          <label for="validationCustom05" class="form-label">Confirm Password</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">*</span>
+          <input type="text" class="form-control" autocomplete="off" onkeyup="validate(false)" id="confirmPassValidation" />
+          <div class="valid-feedback" id="confirmPassValid">Password Matches</div>
+          <div class="invalid-feedback" id="confirmPassInValid">
+            Password and Confirm Password don't match..
+          </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              onkeydown="validate(false)"
+              class="form-check-input"
+              type="checkbox"
+              id="checkboxValidation"
+            />
+            <label class="form-check-label" for="checkboxValidation">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback" id="tcInValid">
+              You must be agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 button-cont">
+          <button class="btn btn-primary" type="button" id="submitForm">
+            Submit-Form
+          </button>
+        </div>
+      </form>
+    </div>
+     <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
